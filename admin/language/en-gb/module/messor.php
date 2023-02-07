@@ -118,6 +118,7 @@ $_['i_button_traffic_analyzer']  = 'This option enables a traffic filtering syst
 
 $_['i_button_ddos']  = 'When this option is enabled, all automatic actions, robots and other suspicious activity will be blocked.
                                     Every visitor will be checked before accessing the site';
+$_['i_button_lock_settings_block_ddos']  = 'Additional blocking settings are available only when the DDoS blocking option is disabled';
 
 
 // Statistic
