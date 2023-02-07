@@ -58,7 +58,7 @@ class Messor extends \Opencart\System\Engine\Controller //todo change name class
     {
         $this->addStyle(array('chunk-common.adb080273d5a6160.css', 'register.b1328b3014aa9c32.css'));
         $this->addScript(array('chunk-vendors.a1fb0853ffb7d5dc.js', 'chunk-common.adb080273d5a6160.js', 'register.b1328b3014aa9c32.js'));
-        
+
         $data['scripts'] = $this->getScript();
         $data['style'] = $this->getStyle();
         $data['path_api'] = $this->getLinkApi('Api');
@@ -767,9 +767,11 @@ trait SecuritySettings
                     'showError' => $this->getSettingsShowError(),
                     'adminPanelName' => $this->getAdminPanelName()
                 );
-                list($post['last_version'], $data['new_version']) = $this->checkLastVersionCMS();
+                list($post['last_version'], $new_version) = $this->checkLastVersionCMS();
                 $storage = $this->moveDirectoryStorage();
                 $data = $this->adapter->SecuritySettingsApiMain($post, $storage);
+                $data['last_version'] = $post['last_version'];
+                $data['new_version'] = $new_version;
                 $data['storage'] = $storage;
                 break;
             case "exclude":
