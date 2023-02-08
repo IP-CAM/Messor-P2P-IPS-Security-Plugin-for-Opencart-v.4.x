@@ -37,8 +37,9 @@ class Messor extends \Opencart\System\Engine\Controller //todo change name class
             $this->registerPage();
             return;
         }
-        $this->addStyle(array('chunk-common.adb080273d5a6160.css', 'main.127685820b62dfc3.css'));
-        $this->addScript(array('chunk-vendors.a1fb0853ffb7d5dc.js', 'chunk-common.adb080273d5a6160.js', 'main.127685820b62dfc3.js'));
+        $this->addStyle(array('chunk-common.367437bd52242aef.css', 'main.4974a81fcd767cc4.css'));
+        $this->addScript(array('chunk-vendors.ee4f6e34da3e61fe.js', 'chunk-common.367437bd52242aef.js', 'main.4974a81fcd767cc4.js'));
+
 
 
         $data['scripts'] = $this->getScript();
@@ -56,8 +57,9 @@ class Messor extends \Opencart\System\Engine\Controller //todo change name class
 
     public function registerPage()
     {
-        $this->addStyle(array('chunk-common.adb080273d5a6160.css', 'register.b1328b3014aa9c32.css'));
-        $this->addScript(array('chunk-vendors.a1fb0853ffb7d5dc.js', 'chunk-common.adb080273d5a6160.js', 'register.b1328b3014aa9c32.js'));
+        $this->addStyle(array('chunk-common.367437bd52242aef.css', 'register.540d0aa13ed9db2d.css'));
+        $this->addScript(array('chunk-vendors.ee4f6e34da3e61fe.js', 'chunk-common.367437bd52242aef.js', 'register.540d0aa13ed9db2d.js'));
+
 
         $data['scripts'] = $this->getScript();
         $data['style'] = $this->getStyle();
@@ -265,8 +267,9 @@ trait FileSystemCheck
             return;
         }
 
-        $this->addStyle(array('chunk-common.adb080273d5a6160.css', 'filesystem-check.3f6a7e2fad9f0122.css'));
-        $this->addScript(array('chunk-vendors.a1fb0853ffb7d5dc.js', 'chunk-common.adb080273d5a6160.js', 'filesystem-check.3f6a7e2fad9f0122.js'));
+        $this->addStyle(array('chunk-common.367437bd52242aef.css', 'filesystem-check.f38ada0b3c4a9ef2.css'));
+        $this->addScript(array('chunk-vendors.ee4f6e34da3e61fe.js', 'chunk-common.367437bd52242aef.js', 'filesystem-check.f38ada0b3c4a9ef2.js'));
+
 
         $data['scripts'] = $this->getScript();
         $data['style'] = $this->getStyle();
@@ -335,8 +338,9 @@ trait FileSystemControl
 
         $FSControll = $this->adapter->MessorLib->FSControll($this);
 
-        $this->addStyle(array('chunk-common.adb080273d5a6160.css', 'filesystem-control.78df3f461d68c18f.css'));
-        $this->addScript(array('chunk-vendors.a1fb0853ffb7d5dc.js', 'chunk-common.adb080273d5a6160.js', 'filesystem-control.78df3f461d68c18f.js'));
+        $this->addStyle(array('chunk-common.367437bd52242aef.css', 'filesystem-control.fa6c25c1a528056f.css'));
+        $this->addScript(array('chunk-vendors.ee4f6e34da3e61fe.js', 'chunk-common.367437bd52242aef.js', 'filesystem-control.fa6c25c1a528056f.js'));
+
 
         $data['scripts'] = $this->getScript();
         $data['style'] = $this->getStyle();
@@ -469,8 +473,9 @@ trait FileDatabaseBackup
 
         $FDBBackup = $this->adapter->MessorLib->FDBBackup($this);
 
-        $this->addStyle(array('chunk-common.adb080273d5a6160.css', 'file-database-backup.659f19e8188e74f8.css'));
-        $this->addScript(array('chunk-vendors.a1fb0853ffb7d5dc.js', 'chunk-common.adb080273d5a6160.js', 'file-database-backup.659f19e8188e74f8.js'));
+        $this->addStyle(array('chunk-common.367437bd52242aef.css', 'file-database-backup.1a36c15d9d7390d1.css'));
+        $this->addScript(array('chunk-vendors.ee4f6e34da3e61fe.js', 'chunk-common.367437bd52242aef.js', 'file-database-backup.1a36c15d9d7390d1.js'));
+
 
         $data['scripts'] = $this->getScript();
         $data['style'] = $this->getStyle();
@@ -617,8 +622,9 @@ trait MalwareClean
         $data['language'] = $this->getLanguage();
         $data['language'] = strip_tags(json_encode($data['language'], JSON_UNESCAPED_UNICODE));
 
-        $this->addStyle(array('chunk-common.adb080273d5a6160.css', 'malware-cleaner.50cd357b770591d7.css'));
-        $this->addScript(array('chunk-vendors.a1fb0853ffb7d5dc.js', 'chunk-common.adb080273d5a6160.js', 'malware-cleaner.50cd357b770591d7.js'));
+        $this->addStyle(array('chunk-common.367437bd52242aef.css', 'malware-cleaner.9c6d09760e535c1c.css'));
+        $this->addScript(array('chunk-vendors.ee4f6e34da3e61fe.js', 'chunk-common.367437bd52242aef.js', 'malware-cleaner.9c6d09760e535c1c.js'));
+
 
         $data['scripts'] = $this->getScript();
         $data['style'] = $this->getStyle();
@@ -731,8 +737,9 @@ trait SecuritySettings
             return;
         }
 
-        $this->addStyle(array('chunk-common.adb080273d5a6160.css'));
-        $this->addScript(array('chunk-vendors.a1fb0853ffb7d5dc.js', 'chunk-common.adb080273d5a6160.js', 'security-settings.f0a969d87aac8ae3.js'));
+        $this->addStyle(array('chunk-common.367437bd52242aef.css'));
+        $this->addScript(array('chunk-vendors.ee4f6e34da3e61fe.js', 'chunk-common.367437bd52242aef.js', 'security-settings.dd8ab8b46aaa6e77.js'));
+
 
         $data['scripts'] = $this->getScript();
         $data['style'] = $this->getStyle();
