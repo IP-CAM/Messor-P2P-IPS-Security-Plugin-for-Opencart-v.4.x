@@ -417,7 +417,7 @@ trait FileSystemCheck
         }
 
         if (isset($post['exclude'])) {
-            $exclude = explode('\n', $post['exclude']);
+            $exclude = array_map('trim', explode("\n", $post['exclude']));
             $FSCheck->setExclude($exclude);
         }
 

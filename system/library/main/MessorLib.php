@@ -1310,7 +1310,7 @@ final class MessorLib
             File::write(Path::WHITE_LIST, Parser::toSettingArray($allow));
         }
     }
-    
+
     /**
      * User registration in the Messor network
      *
@@ -1344,7 +1344,16 @@ final class MessorLib
             $config['Encryption_key'] = $dataResponse['encryption_key'];
             $config['Mess_salt'] = Random::Rand(9, rand(9, 18), 'luds');
             $config['Admin_login'] = $this->http->post('admin_login');
-            $config['Admin_password'] = $this->http->post('admin_password');
+            if ($this->http->post('admin_password')) {
+                $config['Admin_password'] = $this->messPasswordHash($this->http->post('admin_password'));
+            } else {
+                $config['Admin_password'] = '';
+            }
+            if ($this->http->post('language')) {
+                $config['language'] = $this->messPasswordHash($this->http->post('language'));
+            } else {
+                $config['language'] = '';
+            }
             $config['Useragent'] = "Messor client 1b";
 
             File::clear(Path::INFO);
@@ -1362,6 +1371,14 @@ final class MessorLib
             $data = array("text" => $response->getResponseData('message'));
             return array($status, $data);
         }
+    }
+
+    public function messPasswordHash($string)
+    {
+        $hash = sha1($string) . md5($string) . sha1($string);
+        $hash = hash('sha512', $hash);
+        $hash = hash('sha256', $hash);
+        return $hash;
     }
 
     public function getLicenses()
