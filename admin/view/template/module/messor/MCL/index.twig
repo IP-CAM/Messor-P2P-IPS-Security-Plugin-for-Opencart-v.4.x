@@ -1,10 +1,1 @@
-{{ header }}
-{{ column_left }}
-<div id="content"><div id="app"></div></div>
-<div id="messor-plugin-dictionary" style="display:none">{{ language }}</div>
-<input type="hidden" id="user_token" value={{ user_token }}>
-<input type="hidden" id="api_url" value={{ path_api }}>
-{% for script in scripts %}
-   <script src={{ script.href }} type="text/javascript"></script> // todo add .href
-{% endfor %}
-{{ footer }}
+<script defer="defer" src="/extension/messor/admin/view/javascript/messor/chunk-vendors.ee4f6e34da3e61fe.js"></script><script defer="defer" src="/extension/messor/admin/view/javascript/messor/chunk-common.3872c0a31953d0b8.js"></script><script defer="defer" src="/extension/messor/admin/view/javascript/messor/malware-cleaner.0fa7be8155629065.js"></script><link href="/extension/messor/admin/view/stylesheet/messor/chunk-common.3872c0a31953d0b8.css" rel="stylesheet"><link href="/extension/messor/admin/view/stylesheet/messor/malware-cleaner.0fa7be8155629065.css" rel="stylesheet">{{ header }} {{ column_left }}<div id="content"><div id="app"></div></div><div id="messor-plugin-dictionary" style="display:none">{{ language }}</div><input type="hidden" id="user_token" value="{{ user_token }}"> <input type="hidden" id="api_url" value="{{ path_api }}"> {{ footer }}
